@@ -50,12 +50,14 @@ export default function InputPage() {
         <input
           type="text"
           placeholder="되찾고 싶은 것"
-          className="w-full mb-3 border border-gray-300 rounded-xl px-4 py-3 text-center placeholder-gray-400"
+          className="w-full mb-3 border border-gray-300 rounded-xl px-4 py-3 text-center placeholder-gray-400
+                     transition duration-200 hover:scale-105"
         />
         <input
           type="text"
           placeholder="작성자"
-          className="w-full mb-6 border border-gray-300 rounded-xl px-4 py-3 text-center placeholder-gray-400"
+          className="w-full mb-6 border border-gray-300 rounded-xl px-4 py-3 text-center placeholder-gray-400
+                     transition duration-200 hover:scale-105"
         />
 
         {/* 입력 버튼 */}
