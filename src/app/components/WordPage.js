@@ -1,19 +1,34 @@
 'use client';
 
 import Image from 'next/image';
+import { useRouter } from 'next/navigation';
 
-export default function WordPage() {
+export default function WordPage({ onClickScroll }) {
+  const router = useRouter();
+
+  // 로고 클릭 시 디자인 페이지로 이동 + 상위 클릭 이벤트 중단
+  const handleLogoClick = (e) => {
+    e.stopPropagation(); // ❗ section 클릭 이벤트 막기
+    router.push('/design');
+  };
+
   return (
-    <section className="h-screen w-screen bg-[#f8fafb] flex flex-col items-center font-sans">
+    <section
+      onClick={onClickScroll}
+      className="h-screen w-screen bg-[#f8fafb] flex flex-col items-center font-sans cursor-pointer"
+    >
       {/* 상단 로고 */}
-      <div className="mt-10" style={{ transform: 'rotate(-25deg)' }}>
-        <Image
-          src="/IMG_1665.PNG"
-          alt="로고"
-          width={96}    // 120 → 96 (20% 줄임)
-          height={96}
-          priority
-        />
+      <div className="mt-10" onClick={handleLogoClick}>
+        <div className="transform rotate-[-25deg] transition-transform duration-300 hover:rotate-[-35deg]">
+          <Image
+            src="/IMG_1665.PNG"
+            alt="로고"
+            width={96}
+            height={96}
+            priority
+            className="cursor-pointer"
+          />
+        </div>
       </div>
 
       {/* 중앙 넓은 공간 확보 */}
@@ -28,3 +43,5 @@ export default function WordPage() {
     </section>
   );
 }
+
+

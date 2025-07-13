@@ -1,12 +1,24 @@
+'use client';
+
+import { useRef } from 'react';
 import WordPage from './components/WordPage';
 import InputPage from './components/InputPage';
 
 export default function HomePage() {
+  const inputRef = useRef(null);
+
+  const scrollToInput = () => {
+    inputRef.current?.scrollIntoView({ behavior: 'smooth' });
+  };
+
   return (
-    <main className="overflow-y-scroll scroll-smooth h-screen">
-      <WordPage />
-      <InputPage />
-    </main>
+    <>
+      <WordPage onClickScroll={scrollToInput} />
+      <div ref={inputRef}>
+        <InputPage />
+      </div>
+    </>
   );
 }
+
 
