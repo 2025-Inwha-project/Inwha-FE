@@ -20,7 +20,7 @@ export default function InputPage() {
       }}
     >
       {/* 상단 문구 */}
-      <div className="absolute top-16 w-full text-center px-4">
+      <div className="absolute top-24 w-full text-center px-4">
         <h2 className="text-3xl font-bold text-black">
           되찾고 싶은 당신의 시선은 어디를 향하고 있었나요?
         </h2>
