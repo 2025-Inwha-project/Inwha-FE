@@ -1,0 +1,22 @@
+{
+    "name": "Inwha 24x25 Project",
+    "short_name": "Inwha",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#ffffff",
+    "theme_color": "#000000",
+    "description": "인화 24x25 전시 프로그램",
+    "icons": [
+      {
+        "src": "/icons/IMG_1665.PNG",
+        "type": "image/png",
+        "sizes": "192x192"
+      },
+      {
+        "src": "/icons/IMG_1666.PNG",
+        "type": "image/png",
+        "sizes": "512x512"
+      }
+    ]
+  }
+  
