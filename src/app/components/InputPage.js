@@ -25,7 +25,7 @@ export default function InputPage() {
       alert('모든 필드를 입력해주세요!');
       return;
     }
-    else
+    else if(!color)
     {
       alert("색상을 선택해주세요.");
     }
