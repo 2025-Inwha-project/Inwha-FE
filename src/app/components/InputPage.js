@@ -15,15 +15,19 @@ export default function InputPage() {
   const [loading, setLoading] = useState(false);
 
   const colors = [
-    '#264653', '#2A9D8F', '#E9C46A',
-    '#F4A261', '#E76F51', '#EC8C74',
-    '#F0A390',
+    '#675F90', '#002799', '#0055C2',
+    '#007AD4', '#009CD2', '#00BCC3',
+    '#00D9B0',
   ];
 
   const handleSubmit = async () => {
-    if (!item || !author || !color) {
+    if (!item || !author) {
       alert('모든 필드를 입력해주세요!');
       return;
+    }
+    else
+    {
+      alert("색상을 선택해주세요.");
     }
 
     setLoading(true);
@@ -52,7 +56,7 @@ export default function InputPage() {
       className="relative min-h-screen w-screen flex items-center justify-center font-sans px-4"
       style={{
         backgroundImage:
-          'linear-gradient(to bottom, #f8fafb 0%, #f8fafb 35%, #b0b0b0 75%, #2f2f2f 100%)',
+          'linear-gradient(to bottom, #f8fafb 0%, #f8fafb 70%, #b0b0b0 85%, #2f2f2f 100%)',
       }}
     >
       <div className="absolute top-24 w-full text-center px-4">
